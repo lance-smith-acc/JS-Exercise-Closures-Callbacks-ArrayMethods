@@ -301,8 +301,21 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(countLimit) {
+  var limit = countLimit;
+  var count = 0;
+  function counter() {
+    for (;count <= limit;){
+      if (limit <= count){
+        count = 0
+      }
+      else {
+        count++;
+      } 
+    }
+    return count;
+  }
+  return counter;
 }
 
 /////////////// END OF CHALLENGE ///////////////
